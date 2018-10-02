@@ -1,0 +1,20 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@section Scripts{
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.ajax("Customers.json").done(function (data) {
+                console.log(data);
+            }).catch(function (err) {
+                console.log(err);
+            })
+
+        })
+    </script>
+
+}
